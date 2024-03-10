@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>داشبورد</title>
+  <link rel="title icon" type="image/png" href="./pics/icon.png">
+  <link rel="stylesheet" href="./scripts/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+  <style>
+         .toggle {
+               display: none !important;
+         }
+  </style>
+
+</head>
+<body>    
+    
+    <!-- navigation start -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler m-2 bg-light" data-toggle="collapse" data-target="#mynav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="mynav">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- sidebar start -->
+                    <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top bg-dark">
+                       <a href="" class="navbar-brand text-light d-block text-center mx-auto py-3 mb-4 bottom-border">ســیـسـتـم مــدیــریــتـی</a>
+                    
+                        <ul class="nav-bar list-unstyled mt-4 pr-0 text-right" >
+
+                            <li class="nav-item sidebar-link">
+                                <a href="" class="nav-link p-2 mb-2 text-white">
+                                    <i class="fas fa-school ml-3"></i>معاونیت علمی
+                                </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="" class="nav-link p-2 mb-2 text-white current">
+                                    <i class="fas fa-user fa-lg ml-3"></i>کــــاربــــران 
+                                </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="" class="nav-link p-2 mb-2 text-white">
+                                    <i class="fas fa-wrench fa-lg ml-3"></i>تنظیـمـات
+                                </a>
+                            </li>
+                            
+                        </ul>
+
+                        <h5 class="mx-auto py-2 mt- bottom-border text-muted text-center">آمریت های پنج گانه</h5>
+
+                        <ul class="cards nav-bar list-unstyled mt-4 pr-0 text-right" id="myAccordian">
+                            <li class="nav-item" >
+                                <div class="card-header p-0 pt-2" >
+                                    <a href="" onclick="hideElement('maktobs-list','add-maktobs')"  class="nav-link p-2 mb-2 text-white show dash-content" id="tab1" data-toggle="collapse" data-target="#collapse1">
+                                        آمریت PDC
+                                    </a>
+                                </div>
+                                <div class="collapse dash-a list-group" id="collapse1" data-parent="#myAccordian">
+                                    <a href="#maktob-tab" onclick="hideElement('maktobs-list','add-maktobs')" class="text-light d-block mr-5 p-1 list-group-item rounded active" role="tab" data-toggle="list">
+                                        * مکــتوب ها</a>
+                                    <a href="#plan-tab" class="text-light d-block mr-5 p-1 list-group-item rounded " onclick="hideElement('plan-list','add-plan')" role="tab" data-toggle="list">
+                                        * پــــلان ها</a>
+                                    <a href="#comites-tab" onclick="hideElement('comitee-list','add-comitee')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * کـمیتـه ها</a>
+                                    <a href="#workshops-tab" onclick="hideElement('workshop-list','add-workshop')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * ورکـشاپ ها</a>
+                                    <a href="#scholorships-tab" onclick="hideElement('scholorships-list','add-scholorships')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * بورسـیه ها</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item" >
+                                <div class="card-header p-0 pt-2">
+                                    <a href="" class="nav-link p-2 mb-2 text-white dash-content" id="tab2" data-toggle="collapse" data-target="#collapse2">
+                                        آمریت استادان
+                                    </a>
+                                </div>
+                                <div class="collapse dash-a list-group" id="collapse2" data-parent="#myAccordian">
+                                    <a href="#teachers" class="text-light d-block mr-5 p-1 list-group-item rounded active" onclick="hideElement('teachers-list','teachers-profile','add-teachers')" role="tab" data-toggle="list">
+                                        * استادان</a>
+                                    <a href="#teachers-faculties" onclick="hideElement('faculties-list','add-faculties')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * فاکولته ها</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item" >
+                                <div class="card-header p-0 pt-2">
+                                    <a href="" onclick="hideElement('all-criterias','add-criterias')" class="nav-link p-2 mb-2 text-white dash-content" id="tab3"  data-toggle="collapse" data-target="#collapse3">
+                                        آمریت تضمین کیفیت
+                                    </a>
+                                </div>
+                                <div class="collapse dash-a list-group" id="collapse3" data-parent="#myAccordian">
+                                    <a href="#taz1" class="text-light d-block mr-5 p-1 list-group-item rounded active" role="tab" data-toggle="list">
+                                        * معیارات اصلی</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item" >
+                                <div class="card-header p-0 pt-2" >
+                                    <a href=""  class="nav-link p-2 mb-2 text-white show test dash-content" id="tab4"  data-toggle="collapse" data-target="#collapse4">
+                                        آمریت فوق لیسانس    
+                                    </a>
+                                </div>
+                                <div class="collapse dash-a list-group" id="collapse4" data-parent="#myAccordian">
+                                    <a href="#post-teachers-tab" class="text-light d-block mr-5 p-1 list-group-item rounded active" role="tab" data-toggle="list">
+                                        * استــادان</a>
+                                    <a href="#post-students-tab" onclick="hideElement('post-current-students-list','add-post-current-students')" class="text-light d-block mr-5 p-1 list-group-item rounded " role="tab" data-toggle="list">
+                                        * محصلین</a>
+                                    <a href="#post-comites-tab" onclick="hideElement('post-comitee-list','add-post-comitee')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * کــمـیـتــه</a>
+                                    <a href="#post-boards-tab" onclick="hideElement('post-board-list','add-post-board')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * بــــــــــــورد</a>
+                                    <a href="#post-labratories-tab" onclick="hideElement('post-labratories-list','add-post-labratories')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * لابراتوار ها</a>
+                                    <a href="#post-classes-tab" onclick="hideElement('post-classes-list','add-post-classes')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * صــنـــف ها</a>
+                                        <a href="#post-programs-tab" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                            * برنامه ها</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item" >
+                                <div class="card-header p-0 pt-2">
+                                    <a href="" onclick="hideElement('teachers-researchs-list','add-teachers-researchs')" class="nav-link p-2 mb-2 text-white show dash-content" id="tab5" data-toggle="collapse" data-target="#collapse5">
+                                        آمریت تحقیقات علمی
+                                    </a>
+                                </div>
+                                <div class="collapse dash-a list-group" id="collapse5" data-parent="#myAccordian">
+                                    <a href="#academic-researchs" class="text-light d-block mr-5 p-1 list-group-item rounded active" role="tab" data-toggle="list">
+                                        * تحقیقات استادان</a>
+                                    <a href="#international-publication" onclick="hideElement('international-publications-list','add-international-publications')" class="text-light d-block mr-5 p-1 list-group-item rounded " role="tab" data-toggle="list">
+                                        * نشرات بین المللی</a>
+                                    <a href="#curriculum" onclick="hideElement('curriculum-list','add-curriculum','curriculum-details')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * کریکولم</a>
+                                    <a href="#researchs-labratory" onclick="hideElement('researchs-labratories-list','add-researchs-labratories')" class="text-light d-block mr-5 p-1 list-group-item rounded" role="tab" data-toggle="list">
+                                        * لابراتوار</a>
+                                </div>
+                            </li>  
+                       </ul>
+                    </div>
+                    <!-- sidebar end -->
+
+                    <!-- topnav start -->
+                    <div class="col-xl-10 col-lg-9 col-md-8 fixed-top mr-auto py-2 bg-dark top-navbar">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4 class="text-white text-center text-md-right">داشــبــورد</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <form action="" class="form-inline mb-3 my-md-0 ">
+                                    <div class="input-group w-100">
+                                        <button class="btn btn-light search-button">
+                                            <i class="fas fa-search text-danger"></i>
+                                        </button>
+                                        <input type="text" placeholder="جستجو ..." class="form-control ml-lg-4 search-input">
+                                    </div>
+                                </form>
+                            </div> 
+                            <div class="col-md-3">
+                                <div class="navbar-nav flex-row justify-content-around">
+                                    
+                                    <div class="nav-item mr-md-auto">
+                                        <a href="#logoutModal" data-toggle="modal" class="nav-link">
+                                            <i class="fas fa-sign-out-alt fa-lg text-danger" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<h6>خروج</h6>"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- topnav end -->
+                    </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navigation end --> 
+
+
+    <!-- modal start -->
+    <div class="modal fade" id="logoutModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 >آیا میخواهید خارج شوید ؟</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted text-right">در صورت خروج برای دسترسی به پنل باید دوباره وارد شوید.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" data-dismiss="modal">میمانم</button>
+                    <button class="btn btn-danger">خارج میشوم</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+    <script src="./scripts/code.jquery.com_jquery-3.7.0.slim.min.js"></script>
+<script src="./scripts/bootstrap.bundle.min.js"></script>
+<script>
+    $(function (){
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    var innerTags = document.querySelectorAll('.inner-content');
+    var dashTags = document.querySelectorAll('.dash-content');
+    dashTags.forEach((dash)=>{
+        dash.addEventListener('click', ()=>{
+            innerTags.forEach((inner)=>{
+                dash.id == inner.id ?  inner.classList.remove('toggle'): inner.classList.add('toggle');
+            })
+        })
+    })
+
+</script>
+
+<script>
+    function hideElement(first, second,third){
+        $('.'+first).show();
+        $('.'+second).hide();
+        if(third!==undefined) {
+            $('.' + third).hide();
+        }
+    }
+</script>
+</body>
+
+</html>
